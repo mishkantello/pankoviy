@@ -14,33 +14,58 @@ namespace try1
 {
     public partial class Меню : Form
     {
+        public WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+        bool music = false;
         public Меню()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            label1.Parent = pictureBox1;
+            label1.BackColor = Color.Transparent;
+            label2.Parent = pictureBox1;
+            label2.BackColor = Color.Transparent;
+            label3.Parent = pictureBox1;
+            label3.BackColor = Color.Transparent;
+            menuStrip1.Parent = pictureBox1;
+            menuStrip1.BackColor = Color.Transparent;
+            WMP.URL = "Resources/menu.mp3";
+            WMP.controls.play();
+            WMP.settings.volume = 100;
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e) //открытие окна об игре
+        private void оПрограмме(object sender, EventArgs e) //открытие окна об игре
         {
             AboutBox1 программа = new AboutBox1();
             программа.Show();
         }
 
-        private void Меню_Load(object sender, EventArgs e) //настройки стиля окна
-        {
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e) //открытие окна игры и скрывание меню
+        private void новаяИгра(object sender, EventArgs e) //открытие окна игры и скрывание меню
         {
             EPISODE_1 E1 = new EPISODE_1(this);
             E1.Show();
             this.Hide();
+            //WMP.controls.stop();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e) //закрытие игры по нажатию на кнопку выход
+        private void выход(object sender, EventArgs e) //закрытие игры по нажатию на кнопку выход
         {
             Application.Exit();
+        }
+
+        private void Меню_VisibleChanged(object sender, EventArgs e)
+        {
+            switch (music)
+            {
+                case true:
+                    music = false;
+                    WMP.controls.stop();
+                    break;
+                case false:
+                    music = true;
+                    WMP.controls.play();
+                    break;
+            }
         }
     }
 }

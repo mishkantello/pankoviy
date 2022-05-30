@@ -153,6 +153,91 @@
   <ItemGroup>
     <None Include="Resources\frame2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Az8e.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sewse3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\скобка1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\скобка2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sewseц2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sewse3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictures1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictures2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictures3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ending.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
